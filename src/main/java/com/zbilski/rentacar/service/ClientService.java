@@ -2,9 +2,12 @@ package com.zbilski.rentacar.service;
 
 import com.zbilski.rentacar.dto.CarDto;
 import com.zbilski.rentacar.dto.ClientDto;
+import com.zbilski.rentacar.model.Car;
 import com.zbilski.rentacar.model.Client;
 import com.zbilski.rentacar.repository.ClientRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class ClientService {
@@ -23,6 +26,9 @@ public class ClientService {
     clientRepository.save(client);
 
 }
+    public List<Client> getClients() {
+        return clientRepository.findAll();
+    }
 
 
 }

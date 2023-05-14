@@ -299,7 +299,7 @@
 
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
 
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">RENT A CAR</a>
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="../">RENT A CAR</a>
 
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -335,7 +335,7 @@
 
                     <li class="nav-item">
 
-                        <a class="nav-link active" aria-current="page" href="../">
+                        <a class="nav-link active" aria-current="page" href="#">
 
                             <span data-feather="home" class="align-text-bottom"></span>
 
@@ -387,7 +387,7 @@
 
                             <span data-feather="bar-chart-2" class="align-text-bottom"></span>
 
-                            Lista klientów
+                            List klientów
 
                         </a>
 
@@ -482,65 +482,30 @@
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
 
-                <h1 class="h2">Dashboard</h1>
 
             <body>
-            <h1>CAR FORM</h1>
+            <h1>Lista klientów</h1>
 
-            <form action="/add-car" method="POST">
-                <label>MARKA:</label>
-                <input type="text" name="brand"></br>
-
-                <label>MODEL:</label>
-                <input type="text" name="model"></br>
-
-                <label>KLASA:</label>
-                <input type="text" name="classification"></br>
-
-                <label>TABLICE REJESTRACYJNE:</label>
-                <input type="text" name="plates"></br>
-                <label>ROK AUTA:</label>
-                <input type="number"  name="productionYear"></br>
-
-                <label>AKTUALNY PRZEBIEG:</label>
-                <input type="number" name="mileage"></br>
-
-                <label>TERMIN PRZEGLADU:</label>
-                <input type="date" name="deadline"></br>
-
-                <input type="submit" value="Add CAR">
-            </form>
-
-
-            </body>
-
-            </div>
-
-
-
-            <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-
-
-
-            <h2>Section title</h2>
-
-            <div class="table-responsive">
+                        <div class="table-responsive">
 
                 <table class="table table-striped table-sm">
+
+
+                   </tr>
+
 
                     <thead>
 
                     <tr>
 
                         <th scope="col">#</th>
-
-                        <th scope="col">Header</th>
-
-                        <th scope="col">Header</th>
-
-                        <th scope="col">Header</th>
-
-                        <th scope="col">Header</th>
+                        <th scope="col">IMIE</th>
+                        <th scope="col">NAZWISKO</th>
+                        <th scope="col">URODZONY</th>
+                        <th scope="col">DOWOD</th>
+                        <th scope="col">PESEL</th>
+                        <th scope="col">ADRES</th>
+                        <th scope="col">TELEFON</th>
 
                     </tr>
 
@@ -548,239 +513,38 @@
 
                     <tbody>
 
-                    <tr>
-
-                        <td>1,001</td>
-
-                        <td>random</td>
-
-                        <td>data</td>
-
-                        <td>placeholder</td>
-
-                        <td>text</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>1,002</td>
-
-                        <td>placeholder</td>
-
-                        <td>irrelevant</td>
-
-                        <td>visual</td>
-
-                        <td>layout</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>1,003</td>
-
-                        <td>data</td>
-
-                        <td>rich</td>
-
-                        <td>dashboard</td>
-
-                        <td>tabular</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>1,003</td>
-
-                        <td>information</td>
-
-                        <td>placeholder</td>
-
-                        <td>illustrative</td>
-
-                        <td>data</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>1,004</td>
-
-                        <td>text</td>
-
-                        <td>random</td>
-
-                        <td>layout</td>
-
-                        <td>dashboard</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>1,005</td>
-
-                        <td>dashboard</td>
-
-                        <td>irrelevant</td>
-
-                        <td>text</td>
-
-                        <td>placeholder</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>1,006</td>
-
-                        <td>dashboard</td>
-
-                        <td>illustrative</td>
-
-                        <td>rich</td>
-
-                        <td>data</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>1,007</td>
-
-                        <td>placeholder</td>
-
-                        <td>tabular</td>
-
-                        <td>information</td>
-
-                        <td>irrelevant</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>1,008</td>
-
-                        <td>random</td>
-
-                        <td>data</td>
-
-                        <td>placeholder</td>
-
-                        <td>text</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>1,009</td>
-
-                        <td>placeholder</td>
-
-                        <td>irrelevant</td>
-
-                        <td>visual</td>
-
-                        <td>layout</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>1,010</td>
-
-                        <td>data</td>
-
-                        <td>rich</td>
-
-                        <td>dashboard</td>
-
-                        <td>tabular</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>1,011</td>
-
-                        <td>information</td>
-
-                        <td>placeholder</td>
-
-                        <td>illustrative</td>
-
-                        <td>data</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>1,012</td>
-
-                        <td>text</td>
-
-                        <td>placeholder</td>
-
-                        <td>layout</td>
-
-                        <td>dashboard</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>1,013</td>
-
-                        <td>dashboard</td>
-
-                        <td>irrelevant</td>
-
-                        <td>text</td>
-
-                        <td>visual</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>1,014</td>
-
-                        <td>dashboard</td>
-
-                        <td>illustrative</td>
-
-                        <td>rich</td>
-
-                        <td>data</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>1,015</td>
-
-                        <td>random</td>
-
-                        <td>tabular</td>
-
-                        <td>information</td>
-
-                        <td>text</td>
-
-                    </tr>
-
+                    <tr></tr>
+                    <tr th:each="car:${client}">
+                        <td th:text="${client.id}" >   </td>
+                        <td th:text="${client.name}" >   </td>
+                        <td th:text="${client.surname}" >   </td>
+                        <td th:text="${client.birthdate}" >   </td>
+                        <td th:text="${client.identity}" >   </td>
+                        <td th:text="${client.pesel}" >   </td>
+                        <td th:text="${client.address}" >   </td>
+                        <td th:text="${client.phone}" >   </td>
                     </tbody>
 
                 </table>
 
             </div>
 
-        </main>
+
+            </body>
 
     </div>
+
+
+
+    <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+
+
+
+
+
+    </main>
+
+</div>
 
 </div>
 
@@ -796,43 +560,4 @@
 
 </body>
 
-</html>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>CAR FORM</title>
-</head>
-<body>
-<h1>CAR FORM</h1>
-
-<form action="/add-car" method="POST">
-    <label>MARKA:</label>
-    <input type="text" name="brand"></br>
-
-    <label>MODEL:</label>
-    <input type="text" name="model"></br>
-
-    <label>KLASA:</label>
-    <input type="text" name="classification"></br>
-
-    <label>TABLICE REJESTRACYJNE:</label>
-    <input type="text" name="plates"></br>
-    <label>ROK AUTA:</label>
-    <input type="number"  name="productionYear"></br>
-
-    <label>AKTUALNY PRZEBIEG:</label>
-    <input type="number" name="mileage"></br>
-
-    <label>TERMIN PRZEGLADU:</label>
-    <input type="date" name="deadline"></br>
-
-    <input type="submit" value="Add CAR">
-</form>
-
-
-</body>
 </html>

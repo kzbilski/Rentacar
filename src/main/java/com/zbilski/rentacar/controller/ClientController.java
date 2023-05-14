@@ -27,5 +27,13 @@ public class ClientController {
         return "index.html";
     }
 
+    @GetMapping("/see-client")
+    public String getListPage(Model model) {
+        // carService.getCars();
+        model.addAttribute("client", clientService.getClients());  //model kontener
+        return "client-list.html";
+    }
+
+
 
 }
