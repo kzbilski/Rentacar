@@ -1,0 +1,3 @@
+2023-05-10 18:25:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists car add column [*]year integer"; expected "identifier"; SQL statement:
+alter table if exists car add column year integer [42001-214]

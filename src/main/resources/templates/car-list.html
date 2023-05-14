@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CAR LIST</title>
+    <link href="../static/style.css" th:href="@{/style.css}" rel="stylesheet" />
+</head>
+<body>
+<h1>CAR LIST</h1>
+
+<table>
+    <tr>
+        <th>BRAND</th>
+        <th>MODEL</th>
+    </tr>
+    <tr th:each="car:${cars}">
+        <td th:text="${car.brand}" >   </td>
+        <td th:text="${car.model}" >   </td>
+
+    </tr>
+
+
+
+</table>
+
+
+</body>
+</html>
