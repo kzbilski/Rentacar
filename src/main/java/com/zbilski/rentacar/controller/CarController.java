@@ -1,11 +1,14 @@
 package com.zbilski.rentacar.controller;
 
 import com.zbilski.rentacar.dto.CarDto;
+import com.zbilski.rentacar.model.Car;
 import com.zbilski.rentacar.service.CarService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 @Controller
 public class CarController {
@@ -32,8 +35,9 @@ public class CarController {
 
     @GetMapping("/see-car")
     public String getListPage(Model model){
-       // carService.getCars();
-        model.addAttribute("cars",carService.getCars());  //model kontener
+        List<Car> cars = carService.getCars();
+        System.out.println(cars);
+        model.addAttribute("cars",cars);  //model kontener
         return "car-list.html";
 
     }

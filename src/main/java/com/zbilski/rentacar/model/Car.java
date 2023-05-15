@@ -62,4 +62,18 @@ public class Car {
     public String getDeadline() {
         return deadline;
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", classification='" + classification + '\'' +
+                ", plates='" + plates + '\'' +
+                ", productionYear=" + productionYear +
+                ", mileage=" + mileage +
+                ", deadline='" + deadline + '\'' +
+                '}';
+    }
 }

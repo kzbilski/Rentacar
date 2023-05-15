@@ -513,10 +513,8 @@
 
                     <tbody>
 
-                    <tr></tr>
-                    <tr th:each="car:${client}">
-                        <td th:text="${client.id}" >   </td>
-                        <td th:text="${client.name}" >   </td>
+                   <tr th:each="client:${clients}">
+                        <td th:text="${client.id}" >   </td>                        <td th:text="${client.name}" >   </td>
                         <td th:text="${client.surname}" >   </td>
                         <td th:text="${client.birthdate}" >   </td>
                         <td th:text="${client.identity}" >   </td>

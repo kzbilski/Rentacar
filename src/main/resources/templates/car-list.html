@@ -506,23 +506,27 @@
                         <th scope="col">ROK</th>
                         <th scope="col">PRZEBIEG</th>
                         <th scope="col">PRZEGLĄD</th>
-
+                        <th scope="col">OPERACJE</th>
                     </tr>
 
                     </thead>
 
                     <tbody>
 
-                    <tr></tr>
                     <tr th:each="car:${cars}">
                         <td th:text="${car.id}" >   </td>
                         <td th:text="${car.brand}" >   </td>
                         <td th:text="${car.model}" >   </td>
                         <td th:text="${car.classification}" >   </td>
                         <td th:text="${car.plates}" >   </td>
-                        <td th:text="${car.year}" >   </td>
+                        <td th:text="${car.productionYear}" >   </td>
                         <td th:text="${car.mileage}" >   </td>
                         <td th:text="${car.deadline}" >   </td>
+                        <td>
+                            <form th:action="@{'/add-reservation/'+${car.id}}" method="GET">
+                            <button type="submit">Wynajmij</button>
+                            </form>
+                        </td>
                     </tbody>
 
                 </table>

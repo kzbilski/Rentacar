@@ -65,5 +65,17 @@ public class Client {
         return phone;
     }
 
-
+    @Override
+    public String toString() {
+        return "Client{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", birthdate='" + birthdate + '\'' +
+                ", identity='" + identity + '\'' +
+                ", pesel='" + pesel + '\'' +
+                ", address='" + address + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
 }
