@@ -1,0 +1,13 @@
+2023-05-16 23:02:26 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (CAR: ""ID"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CAR"("ID","BRAND","CLASSIFICATION","DEADLINE","MILEAGE","MODEL","PLATES","PRODUCTION_YEAR")VALUES(?,?,?,?,?,?,?,?) [22018-214]
+2023-05-16 23:02:26 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (CAR: ""ID"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CAR"("ID","BRAND","CLASSIFICATION","DEADLINE","MILEAGE","MODEL","PLATES","PRODUCTION_YEAR")VALUES(?,?,?,?,?,?,?,?) [22018-214]
+2023-05-16 23:02:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CAR\000d\000aCLIENT [*]RESERVATION"; SQL statement:
+SELECT * FROM CAR
+CLIENT RESERVATION [42000-214]
+2023-05-16 23:03:10 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]CLIENT"; expected "COMMIT, CREATE, CALL, CHECKPOINT, COMMENT"; SQL statement:
+CLIENT [42001-214]

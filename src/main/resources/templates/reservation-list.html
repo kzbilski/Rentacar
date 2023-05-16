@@ -484,7 +484,7 @@
 
 
             <body>
-            <h1>Lista klientów</h1>
+            <h1>Lista rezerwacji</h1>
 
             <div class="table-responsive">
 
@@ -498,11 +498,11 @@
 
                     <tr>
 
-                        <th scope="col">#</th>
-                        <th scope="col">MARKA</th>
-                        <th scope="col">MODEL</th>
-                        <th scope="col">TABLICE</th>
-
+                        <th scope="col">Tablice</th>
+                        <th scope="col">Imie</th>
+                        <th scope="col">Start</th>
+                        <th scope="col">koniec</th>
+                        <th scope="col">cena</th>
                     </tr>
 
                     </thead>
@@ -510,11 +510,12 @@
                     <tbody>
 
                     <tr th:each="reservation:${reservations}">
-                        <td th:text="${reservation.start}" >   </td>
+                        <td th:text ="${reservation.carPlates}"> </td>
                         <td th:text="${reservation.clientName}" >   </td>
+                        <td th:text="${reservation.start}" >   </td>
                         <td th:text="${reservation.end}" >   </td>
                         <td th:text="${reservation.price}" >   </td>
-                        <td th:text ="${reservation.carPlates}"> </td>
+
                     </tr>
                     </tbody>
 
