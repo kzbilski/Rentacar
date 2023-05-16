@@ -11,3 +11,6 @@ CLIENT RESERVATION [42000-214]
 2023-05-16 23:03:10 jdbc[14]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]CLIENT"; expected "COMMIT, CREATE, CALL, CHECKPOINT, COMMENT"; SQL statement:
 CLIENT [42001-214]
+2023-05-16 23:32:54 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]CLIENT"; expected "COMMIT, CREATE, CALL, CHECKPOINT, COMMENT"; SQL statement:
+CLIENT [42001-214]
