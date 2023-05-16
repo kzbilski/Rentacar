@@ -1,38 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Strona z kolumną</title>
-  <style>
-    .container {
-      display: flex;
-    }
 
-    .left-column {
-      flex: 1;
-      background-color: #f2f2f2;
-      padding: 10px;
-    }
+<table class="table table-striped table-sm">
 
-    .right-column {
-      flex: 2;
-      padding: 10px;
-    }
-  </style>
-</head>
-<body>
-<div class="container">
-  <div class="left-column">
-    <ul>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-      <li><a href="#">Link 3</a></li>
-      <!-- Dodaj więcej linków tutaj -->
-    </ul>
-  </div>
-  <div class="right-column">
-    <h1>Treść</h1>
-    <p>To jest właściwa treść, która będzie wyświetlana po prawej stronie.</p>
-  </div>
-</div>
-</body>
-</html>
+
+
+
+
+  <thead>
+
+  <tr>
+
+    <th scope="col">#</th>
+    <th scope="col">MARKA</th>
+    <th scope="col">MODEL</th>
+    <th scope="col">TABLICE</th>
+
+
+  </tr>
+
+  </thead>
+
+  <tbody>
+  <tr th:each="reservation:${reservations}">
+    <td th:text="${reservation.start}" >   </td>
+    <td th:text="${reservation.clientName}" >   </td>
+    <td th:text="${reservation.end}" >   </td>
+    <td th:text="${reservation.price}" >   </td>
+    <td th:text ="${reservation.carPlates}"> </td>
+  </tr>
+
+
+  </tbody>
+
+</table>
