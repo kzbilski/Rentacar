@@ -1,17 +1,16 @@
 package com.zbilski.rentacar.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Reservation {
     @Id
     @GeneratedValue
     private int id;
-    private int carId;
-    private int clientId;
+    @ManyToOne
+    private Car car;
+    @ManyToOne
+    private Client client;
     @Column(name = "start_date")
     private String start;
     @Column(name = "end_date")
@@ -19,9 +18,9 @@ public class Reservation {
     private double price;
 
 
-    public Reservation(int carId, int clientId, String start, String end, double price) {
-        this.carId = carId;
-        this.clientId = clientId;
+    public Reservation(Car car, Client client, String start, String end, double price) {
+        this.car = car;
+        this.client = client;
         this.start = start;
         this.end = end;
         this.price = price;
@@ -35,12 +34,12 @@ public class Reservation {
         return id;
     }
 
-    public int getCarId() {
-        return carId;
+    public Car getCar() {
+        return car;
     }
 
-    public int getClientId() {
-        return clientId;
+    public Client getClient() {
+        return client;
     }
 
     public String getStart() {
@@ -59,8 +58,8 @@ public class Reservation {
     public String toString() {
         return "Reservation{" +
                 "id=" + id +
-                ", carId=" + carId +
-                ", clientId=" + clientId +
+                ", car=" + car +
+                ", client=" + client +
                 ", start='" + start + '\'' +
                 ", koniec='" + end + '\'' +
                 ", price=" + price +

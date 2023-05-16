@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Reservation</title>
+    <title>Rezerwacja</title>
 
 
 
@@ -18,7 +18,12 @@
 
 <form action="/add-reservation" method="POST">
     <label>Id klienta:</label>
-    <input type="number" name="clientId"></br>
+    <select name="clientId">
+        <option th:each="client:${clients}" th:value="${client.id}" th:text="${client.name}" th:text="${client.surname}"> </option>
+
+    </select> </br>
+
+    <!-- <input type="number" name="clientId"></br> -->
 
     <label>START REZERWACJI:</label>
     <input type="date" name="start"></br>
@@ -26,10 +31,10 @@
     <input type="date" name="end"></br>
     <label>KOSZT:</label>
     <input type="number" name="price"></br>
-    <input type="hidden" name="carId" th:value="${id}">
+    <input type="hidden" name="carId" th:value="${carId}">
 
 
-    <input type="submit" value="Dodaj rezerwacji">
+    <input type="submit" value="Dodaj rezerwacje">
 </form>
 </body>
 </html>
