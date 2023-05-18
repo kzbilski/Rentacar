@@ -9,6 +9,20 @@ public class CarDto {
     private Integer mileage;
     private String deadline;
 
+
+    public CarDto(String brand, String model, String classification, String plates, Integer productionYear, Integer mileage, String deadline) {
+        this.brand = brand;
+        this.model = model;
+        this.classification = classification;
+        this.plates = plates;
+        this.productionYear = productionYear;
+        this.mileage = mileage;
+        this.deadline = deadline;
+    }
+
+    public CarDto() {
+    }
+
     public String getBrand() {
         return brand;
     }

@@ -1,6 +1,7 @@
 package com.zbilski.rentacar.dto;
 
 public class ReservationDto {
+    private int id;
     private int carId;
     private String carPlates;  //String !!
     private int clientId;
@@ -9,6 +10,12 @@ public class ReservationDto {
     private String end;
     private double price;
 
+    public ReservationDto(int id, String start, String end, double price) {
+        this.id = id;
+        this.start = start;
+        this.end = end;
+        this.price = price;
+    }
 
     public ReservationDto() {    //przy uzytkowniku z formularza
     }
@@ -21,6 +28,13 @@ public class ReservationDto {
         this.start = start;
         this.end = end;
         this.price = price;
+    }
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCarPlates() {

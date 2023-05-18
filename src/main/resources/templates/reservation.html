@@ -19,7 +19,7 @@
 <form action="/add-reservation" method="POST">
     <label>Id klienta:</label>
     <select name="clientId">
-        <option th:each="client:${clients}" th:value="${client.id}" th:text="${client.name}" th:text="${client.surname}"> </option>
+        <option th:each="client:${clients}" th:value="${client.id}" th:text="${client.name}+' '+ ${client.surname}"> </option>
 
     </select> </br>
 

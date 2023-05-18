@@ -32,8 +32,8 @@ public class ReservationService {
         Reservation reservation = new Reservation(car,client, reservationDto.getStart(),reservationDto.getEnd(),
                 reservationDto.getPrice());
         System.out.println(reservation);
-        reservationRepository.save(reservation);
-
+        reservationRepository.save(reservation);  //zapisane w bazie
+        reservationDto.setId(reservation.getId());  // nadane id i wstawiane do Dto
     }
 
 

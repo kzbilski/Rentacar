@@ -9,6 +9,19 @@ public class ClientDto {
     private String address;
     private String phone;
 
+    public ClientDto(String name, String surname, String birthdate, String identity, String pesel, String address, String phone) {
+        this.name = name;
+        this.surname = surname;
+        this.birthdate = birthdate;
+        this.identity = identity;
+        this.pesel = pesel;
+        this.address = address;
+        this.phone = phone;
+    }
+
+    public ClientDto() {
+    }
+
     public String getName() {
         return name;
     }

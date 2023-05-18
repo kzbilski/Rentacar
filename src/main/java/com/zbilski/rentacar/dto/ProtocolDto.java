@@ -4,22 +4,22 @@ import com.zbilski.rentacar.model.Car;
 import com.zbilski.rentacar.model.Client;
 
 public class ProtocolDto {
-    private Car car;
-    private Client client;
+    private CarDto carDto;
+    private ClientDto clientDto;
     private ReservationDto reservationDto;
 
-    public ProtocolDto(Car car, Client client, ReservationDto reservationDto) {
-        this.car = car;
-        this.client = client;
+    public ProtocolDto(CarDto carDto, ClientDto clientDto, ReservationDto reservationDto) {
+        this.carDto = carDto;
+        this.clientDto = clientDto;
         this.reservationDto = reservationDto;
     }
 
-    public Car getCar() {
-        return car;
+    public CarDto getCarDto() {
+        return carDto;
     }
 
-    public Client getClient() {
-        return client;
+    public ClientDto getClientDto() {
+        return clientDto;
     }
 
     public ReservationDto getReservationDto() {

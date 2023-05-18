@@ -24,13 +24,13 @@ public class CarController {
       public String getCarPage(Model model){
          CarDto carDto = new CarDto();
          model.addAttribute(carDto);
-      return "/index.html";
+      return "/car-form.html";
       }
     @PostMapping("/add-car")
     public String addCar(CarDto carDto) {
         // System.out.println(carDto);
         carService.addCar(carDto);
-         return "/index.html";
+         return "/car-form.html";
     }
 
     @GetMapping("/see-car")

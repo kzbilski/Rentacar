@@ -27,7 +27,7 @@ public class ClientController {
     public String addClient(ClientDto clientDto) {
         // System.out.println(carDto);
         clientService.addClient(clientDto);
-        return "index.html";
+        return "client-form.html";
     }
 
     @GetMapping("/see-client")

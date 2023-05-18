@@ -41,7 +41,7 @@ public class ReservationController {
     public String addReservation(ReservationDto reservationDto) {
         System.out.println(reservationDto);
         reservationService.addReservation(reservationDto);
-        return "index.html";
+        return "redirect:/protocol/"+reservationDto.getId();  //id z nadania
     }
 
     @GetMapping("/see-reservation")
