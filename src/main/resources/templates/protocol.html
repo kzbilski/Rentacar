@@ -9,13 +9,14 @@
 
 <div>
     <div style ="text-align:center;">Protokół wynajmu samochodu </div>
-Umowa najmu samochodu marki <strong><label th:text="${protocol.carDto.brand}" >   </label><label th:text="${protocol.carDto.model}">   </label> </strong>
+Umowa najmu samochodu marki <strong><label th:text="${protocol.carDto.brand}" >   </label> </strong>
+    <label th:text="${protocol.carDto.model}"></label>
     z tablicami <strong> <label th:text="${protocol.carDto.plates}" >   </label> </strong>
     pomiedzy firma wynajmujaca a najemca  <strong></strong><label th:text="${protocol.clientDto.name}" >   </label><strong></strong> </br>
-    Nazwisko najemcy <strong> <label th:text="${protocol.clientDto.surname}" >   </label> </strong></br>
-<!--    <label th:text="${protocol.end}" >   </label>-->
-<!--    <label th:text="${reservation.price}" >   </label>-->
-<!--    <label th:text ="${reservation.carPlates}"> </label>-->
+    Nazwisko: <strong> <label th:text="${protocol.clientDto.surname}" >   </label> </strong></br>
+  Najem zaczyna się  <label th:text="${protocol.start}"> </label> a konczy: <label th:text="${protocol.end}" >  </label>
+Uzgodnia cena wynajmu to <label th:text="${reservation.price}" >   </label>
+Zostało wynajęte auto  </br>
 </div>
 
 
