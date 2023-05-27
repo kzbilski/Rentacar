@@ -22,7 +22,6 @@ public class ProtocolController {
         ProtocolDto protocolDto= protocolService.getProtocolDto(reservationId);
         model.addAttribute("protocol",protocolDto);
 
-        //na html rzucamy Dto a na bazie dancych encje (entity)z modelu
        return "protocol.html";
     }
 

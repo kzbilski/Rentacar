@@ -50,32 +50,3 @@ public class ProtocolService {
 }
 
 
-/*
-*  modyfikatory|typ zwracany | nazwa z małej litery | (parametry jako zmienne) | { ciało metody zawierajace instrukcje }
-* public Car getCar(int carId){
-*     return new Car(carId);
-* }
-*
-* typ może być prymitywny: int, long, double, boolean itd.
-* każdy inny typ to referencyjny inaczej obiektowy
-*  jest z dużej litery od nazwy klasy: Car, String, Client, HomeController
-* klasy to jedyna rzecz którą piszemy w javie z dużej litery
-*
-* deklaracja zmiennej: typ | nazwa
-* np: Clint client;
-*     int liczba;
-*
-* do zadeklarowanej zmiennej można coś wstawić.
-* do prymitywnej wartość, do obiektowej obiekt
-*
-* instr. tworzenia obiektu: new | typ referencyjny | (argumenty konstrultora)
-*       new Car(10);
-*
-* stworzyć obiekt i zapisać do zmiennej:
-*       Client client = new Client();
-*
-* przywołanie zmiennej to odniesienie się do jej nazwy (tej z małej litery):
-*
-* System.out.println(client.getId());
-* odnosi się do zmiennej, wywołuje na obiekcie z ta zmienna getera i drukuje to co wyciągnął
-* */
