@@ -19,9 +19,7 @@
         <option th:each="client:${clients}" th:value="${client.id}" th:text="${client.name}+' '+ ${client.surname}"> </option>
 
     </select> </br>
-
     <!-- <input type="number" name="clientId"></br> -->
-
     <label>START REZERWACJI:</label>
     <input type="date" name="start"></br>
     <label>KONIEC REZERWACJI:</label>

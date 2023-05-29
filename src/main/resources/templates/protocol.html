@@ -8,15 +8,15 @@
 
 
 <div>
-    <div style ="text-align:center;">Protokół wynajmu samochodu </div>
+   <div style ="text-align:center;">Protokół wynajmu samochodu </div>
 Umowa najmu samochodu marki <strong><label th:text="${protocol.carDto.brand}" >   </label> </strong>
     <label th:text="${protocol.carDto.model}"></label>
     z tablicami <strong> <label th:text="${protocol.carDto.plates}" >   </label> </strong>
-    pomiedzy firma wynajmujaca a najemca  <strong></strong><label th:text="${protocol.clientDto.name}" >   </label><strong></strong> </br>
+    pomiedzy firma wynajmujaca a najemca  <strong></strong><label th:text="${protocol.clientDto.name}" >   </label> </br>
     Nazwisko: <strong> <label th:text="${protocol.clientDto.surname}" >   </label> </strong></br>
-  Najem zaczyna się  <label th:text="${protocol.start}"> </label> a konczy: <label th:text="${protocol.end}" >  </label>
-Uzgodnia cena wynajmu to <label th:text="${reservation.price}" >   </label>
-Zostało wynajęte auto  </br>
+    <!-- Najem zaczyna się  <label th:text="${protocol.start}"> </label> a konczy: <label th:text="${reservation.end}" >  </label>
+    Uzgodniona cena wynajmu to <label th:text="${protocol.price}" >   </label>-->
+      </br>
 </div>
 
 

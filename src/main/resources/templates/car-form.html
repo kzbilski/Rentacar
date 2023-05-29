@@ -485,42 +485,55 @@
                 <h1 class="h2">Formularz samochodów</h1>
 
 
-            <form action="/add-car" method="POST">
+            <form action="/add-car" method="POST" th:object="${car}">
                 <label>MARKA:</label>
-                <input type="text" name="brand"></br>
+
+                <input type="text" th:field="*{brand}"></br>
+                <div th:if="${#fields.hasErrors('brand')}" th:errors="*{brand}"></div>
 
                 <label>MODEL:</label>
-                <input type="text" name="model"></br>
+
+                <input type="text" th:field="*{model}"></br>
+                <div th:if="${#fields.hasErrors('model')}" th:errors="*{model}"></div>
+
 
                 <label>KLASA:</label>
-                <input type="text" name="classification"></br>
+
+                <input type="text" th:field="*{classification}"></br>
+                <div th:if="${#fields.hasErrors('classification')}" th:errors="*{classification}"></div>
 
                 <label>TABLICE REJESTRACYJNE:</label>
-                <input type="text" name="plates"></br>
+
+                <input type="text" th:field="*{plates}"></br>
+                <div th:if="${#fields.hasErrors('plates')}" th:errors="*{plates}"></div>
+
                 <label>ROK AUTA:</label>
-                <input type="number"  name="productionYear"></br>
+
+                <input type="number" th:field="*{productionYear}"></br>
+                <div th:if="${#fields.hasErrors('productionYear')}" th:errors="*{productionYear}"></div>
 
                 <label>AKTUALNY PRZEBIEG:</label>
-                <input type="number" name="mileage"></br>
+
+                <input type="number" th:field="*{mileage}"></br>
+                <div th:if="${#fields.hasErrors('mileage')}" th:errors="*{mileage}"></div>
 
                 <label>TERMIN PRZEGLADU:</label>
-                <input type="date" name="deadline"></br>
-
+                <input type="date" th:field="*{deadline}"></br>
+                <div th:if="${#fields.hasErrors('deadline')}" th:errors="*{deadline}"></div>
                 <input type="submit" value="Dodaj samochód">
             </form>
 
 
 
 
-            </div>
+
 
 
 
             <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 
-
-
-
-
+        </main>
+    </div>
+</div>
 </body>
 </html>

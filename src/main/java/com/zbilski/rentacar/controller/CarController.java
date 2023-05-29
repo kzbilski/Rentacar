@@ -3,9 +3,12 @@ package com.zbilski.rentacar.controller;
 import com.zbilski.rentacar.dto.CarDto;
 import com.zbilski.rentacar.model.Car;
 import com.zbilski.rentacar.service.CarService;
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -23,11 +26,15 @@ public class CarController {
      @GetMapping("/add-car")
       public String getCarPage(Model model){
          CarDto carDto = new CarDto();
-         model.addAttribute(carDto);
+         model.addAttribute("car",carDto);
       return "/car-form.html";
       }
     @PostMapping("/add-car")
-    public String addCar(CarDto carDto) {
+    public String addCar(@Valid @ModelAttribute("car") CarDto carDto, BindingResult bindingResult) {
+        if ( bindingResult.hasErrors()){
+           // System.out.println("sa errory");
+           // System.out.println(bindingResult.getFieldErrors());
+        }
         // System.out.println(carDto);
         carService.addCar(carDto);
          return "/car-form.html";
