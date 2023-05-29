@@ -487,7 +487,6 @@
 
             <form action="/add-car" method="POST" th:object="${car}">
                 <label>MARKA:</label>
-
                 <input type="text" th:field="*{brand}"></br>
                 <div th:if="${#fields.hasErrors('brand')}" th:errors="*{brand}"></div>
 
