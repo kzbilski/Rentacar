@@ -519,6 +519,8 @@
                 <label>TERMIN PRZEGLADU:</label>
                 <input type="date" th:field="*{deadline}"></br>
                 <div th:if="${#fields.hasErrors('deadline')}" th:errors="*{deadline}"></div>
+
+                <input type="hidden" name="id" th:value="*{id}">
                 <input type="submit" value="Dodaj samochód">
             </form>
 

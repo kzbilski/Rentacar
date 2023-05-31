@@ -526,6 +526,10 @@
                             <form th:action="@{'/add-reservation/'+${car.id}}" method="GET">
                             <button type="submit">Wynajmij</button>
                             </form>
+                            <form th:action="@{'/add-car'}" method="GET">
+                                <input type="hidden" name="id" th:value="${car.id}">
+                                <button type="submit">EDYTUJ</button>
+                            </form>
                         </td>
                     </tbody>
 

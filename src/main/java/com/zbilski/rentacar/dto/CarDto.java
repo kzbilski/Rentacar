@@ -6,13 +6,14 @@ import org.hibernate.validator.constraints.Range;
 import java.time.LocalDate;
 
 public class CarDto {
+    private Integer id;
     @Size (min=3,message = "Potrzebne minimum 3 znaki")
     private String brand;
     @Size (min=3,message = "Potrzebne minimum 3 znaki")
     private String model;
     @Size (min=3,message = "Potrzebne minimum 3 znaki")
     private String classification;
-    @Pattern(regexp = "^[A-Z]{2,3}[0-9]{1,2}[A-Z]{0,3}[0-9]{0,4}$", message = "wymagany format tablic jak ZS12345")
+    @Pattern(regexp = "^[A-Z]{2}\\d{4,5}$", message = "wymagany format tablic jak ZS12345")
     private String plates;
     @Range (min=2000,max=2030, message = "zakres dat od 2000 do 2030")
     private Integer productionYear;
@@ -32,6 +33,14 @@ public class CarDto {
     }
 
     public CarDto() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getBrand() {return brand;}
@@ -91,7 +100,8 @@ public class CarDto {
     @Override
     public String toString() {
         return "CarDto{" +
-                "brand='" + brand + '\'' +
+                "id=" + id +
+                ", brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", classification='" + classification + '\'' +
                 ", plates='" + plates + '\'' +

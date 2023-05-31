@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 public class Car {
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
     private String brand;
     private String model;
     private String classification;
@@ -31,7 +31,7 @@ public class Car {
     public Car() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -61,6 +61,10 @@ public class Car {
 
     public String getDeadline() {
         return deadline;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     @Override

@@ -21,6 +21,7 @@ public class CarService {
         System.out.println("dodanie samochodu");
         Car car = new Car (carDto.getBrand(), carDto.getModel(), carDto.getClassification(), carDto.getPlates(),
                 carDto.getProductionYear(), carDto.getMileage(), carDto.getDeadline());
+        car.setId(carDto.getId());
         carRepository.save(car);
 
     }
@@ -31,4 +32,11 @@ public class CarService {
     }
 
 
+    public CarDto getCar(Integer id) {
+        Car car = carRepository.findById(id).orElseThrow();
+        CarDto carDto = new CarDto(car.getBrand(), car.getModel(), car.getClassification(), car.getPlates(),
+                car.getProductionYear(), car.getMileage(), car.getDeadline());
+        carDto.setId(id);
+        return carDto;
+    }
 }
